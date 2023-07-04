@@ -4,12 +4,11 @@ const {Router} = require("express");
 const router = Router();
 
 // Importing controller functions
-const {getAllResturants, addResturant, searchResturant, updateResturant, deleteResturant} = require ("../controllers/restarauntController");
+const {getAllResturants, addResturant, searchResturants, updateResturant, deleteResturant} = require ("../controllers/restarauntController");
 
 // Setting up routes for note operations
-router.get("/", getAllResturants);
+router.post("/searchResturants", searchResturants);
 router.post("/addResturant", addResturant);
-router.post("/searchResturant", searchResturant);
 router.post("/updateResturant", updateResturant);
 router.post("/deleteResturant", deleteResturant);
 
